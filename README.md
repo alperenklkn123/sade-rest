@@ -44,3 +44,12 @@ Current contact values used in this build:
 - WhatsApp: +90 545 536 95 36
 - Instagram: @sade.kalkan
 - Address: Hasan Altan Cd. No:7, 07960 Kalkan, Kaş / Antalya
+
+
+## V3 navigation update
+
+- Quick links are now in a permanent fixed terracotta top bar.
+- Phone and WhatsApp stay on the right side of the top bar on desktop.
+- The duplicated Experience / Menu / Gallery / Contact navigation was removed from the lower header.
+- The lower header now contains only the Sade brand and Book a Table button.
+- On smaller screens, the quick links remain fixed and horizontally scrollable.

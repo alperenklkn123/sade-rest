@@ -16,34 +16,9 @@
   window.setTimeout(hideLoader, 3600);
 
   const nav = $('#site-nav');
-  const menuToggle = $('.menu-toggle');
-  const mobileMenu = $('#mobile-menu');
+  // The primary navigation is always visible in the fixed top bar.
+  const closeMenu = () => {};
 
-  const syncNav = () => nav && nav.classList.toggle('is-scrolled', window.scrollY > 24);
-  syncNav();
-  window.addEventListener('scroll', syncNav, {passive:true});
-
-  const closeMenu = () => {
-    if (!menuToggle || !mobileMenu) return;
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Open menu');
-    mobileMenu.classList.remove('is-open');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    nav?.classList.remove('menu-active');
-    document.body.classList.remove('menu-open');
-  };
-
-  menuToggle?.addEventListener('click', () => {
-    const opening = menuToggle.getAttribute('aria-expanded') !== 'true';
-    menuToggle.setAttribute('aria-expanded', String(opening));
-    menuToggle.setAttribute('aria-label', opening ? 'Close menu' : 'Open menu');
-    mobileMenu?.classList.toggle('is-open', opening);
-    mobileMenu?.setAttribute('aria-hidden', String(!opening));
-    nav?.classList.toggle('menu-active', opening);
-    document.body.classList.toggle('menu-open', opening);
-  });
-  $$('.mobile-menu a').forEach(a => a.addEventListener('click', closeMenu));
-  window.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 
   let lenis = null;
 
