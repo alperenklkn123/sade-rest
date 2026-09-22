@@ -1,51 +1,46 @@
-# Sade Terrace Restaurant Website
+# Sade Terrace Restaurant — V2
 
-Static, GitHub Pages-ready restaurant website.
+GitHub Pages-ready static website. No npm, build, Actions or workflow is required.
 
-## Files
+## Upload
+
+Upload these files/folders directly to the repository root:
 
 - `index.html`
 - `styles.css`
 - `script.js`
+- `favicon.svg`
+- `assets/`
+- `.nojekyll`
 
-No npm / build step required.
+GitHub Pages settings:
 
-## GitHub Pages
+- Source: **Deploy from a branch**
+- Branch: **main**
+- Folder: **/(root)**
 
-1. Create a new GitHub repository.
-2. Upload all files from this folder to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose:
-   - Source: **Deploy from a branch**
-   - Branch: **main**
-   - Folder: **/(root)**
-5. Save.
+## What V2 fixes
 
-The site will be published through GitHub Pages.
+- Loader has a hard failsafe and cannot permanently block the page.
+- GSAP / Lenis failure falls back to a usable native page.
+- Updated GSAP and Lenis CDN package paths.
+- Mobile navigation added.
+- Safari / mobile viewport and safe-area behavior improved.
+- Reduced-motion accessibility added.
+- Below-the-fold images lazy-load.
+- Every remote demo image has a local SVG fallback inside `assets/images/`.
+- Fake phone/WhatsApp placeholders removed.
+- Contact details, Instagram and Maps links added.
+- Menu rows no longer pretend to be reservation links.
+- Desktop-only hover preview is disabled on touch devices.
 
-## Before launch
+## Important before the real launch
 
-Search `index.html` and replace:
+The main photographs are demo images. Replace them with Sade Terrace's real photography when available. The local SVG files are safety fallbacks, not final restaurant photography.
 
-- `+900000000000` with the restaurant phone number.
-- `https://wa.me/900000000000` with the WhatsApp number.
-- `Instagram ↗` placeholder link.
-- `Google Maps ↗` placeholder link.
-- Address if required.
-- Current Unsplash images with real Sade Terrace photos.
+Current contact values used in this build:
 
-## Images
-
-The demo currently uses remote Unsplash images so the project stays lightweight.
-For production, replace the URLs with the restaurant's own photos.
-
-Recommended folder structure if you add local images:
-
-assets/
-  hero.jpg
-  terrace.jpg
-  seafood.jpg
-  steak.jpg
-  cocktails.jpg
-
-Then update each `<img src="...">` path in `index.html`.
+- Landline: +90 242 844 23 03
+- WhatsApp: +90 545 536 95 36
+- Instagram: @sade.kalkan
+- Address: Hasan Altan Cd. No:7, 07960 Kalkan, Kaş / Antalya

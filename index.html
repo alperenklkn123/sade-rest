@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sade Terrace Restaurant — Mediterranean evenings above Kalkan." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#11100e">
+  <meta name="description" content="Sade Terrace Restaurant — Mediterranean dining in Kalkan, Antalya.">
   <title>Sade Terrace Restaurant | Kalkan</title>
 
+  <script>document.documentElement.classList.add('has-js');</script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="noise"></div>
+  <div class="noise" aria-hidden="true"></div>
 
   <div class="loader" aria-hidden="true">
     <div class="loader__inner">
@@ -22,7 +24,7 @@
     </div>
   </div>
 
-  <header class="nav">
+  <header class="nav" id="site-nav">
     <a class="brand" href="#top" aria-label="Sade home">
       <span>SADE</span>
       <small>Terrace Restaurant</small>
@@ -35,39 +37,54 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="pill magnetic" href="#reservation">
-      <span>Book a table</span>
-    </a>
+    <a class="pill magnetic desktop-book" href="#reservation"><span>Book a table</span></a>
+
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
   </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="#experience">Experience</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reservation">Reservations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="mobile-menu__contact">
+      <a href="tel:+902428442303">+90 242 844 23 03</a>
+      <a href="https://wa.me/905455369536" target="_blank" rel="noopener">WhatsApp ↗</a>
+    </div>
+  </div>
 
   <main>
     <section class="hero" id="top">
       <div class="hero__media parallax-media">
         <img
           src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2200&q=88"
-          alt="Elegant restaurant table at sunset"
-        />
+          onerror="this.onerror=null;this.src='assets/images/fallback-hero.svg'"
+          alt="Elegant restaurant dining atmosphere"
+          fetchpriority="high"
+          decoding="async">
         <div class="hero__shade"></div>
       </div>
 
       <div class="hero__eyebrow reveal">
         <span>Kalkan • Mediterranean Coast</span>
-        <span>36.265° N / 29.414° E</span>
+        <span>Hasan Altan Cd. No:7</span>
       </div>
 
       <div class="hero__title-wrap">
-        <h1 class="hero__title split-title" aria-label="Sade">
+        <h1 class="hero__title" aria-label="Sade">
           <span>S</span><span>A</span><span>D</span><span>E</span>
         </h1>
         <p class="hero__sub reveal">Terrace Restaurant</p>
       </div>
 
       <div class="hero__bottom reveal">
-        <p>Mediterranean evenings<br>above the lights of Kalkan.</p>
-        <a href="#experience" class="scroll-link">
-          Scroll to discover
-          <span>↓</span>
-        </a>
+        <p>Mediterranean evenings<br>above Kalkan.</p>
+        <a href="#experience" class="scroll-link">Scroll to discover <span>↓</span></a>
       </div>
     </section>
 
@@ -82,15 +99,13 @@
       <div class="statement__media image-reveal">
         <img
           src="https://images.unsplash.com/photo-1516211697506-8360dbcfe9a4?auto=format&fit=crop&w=1800&q=88"
-          alt="Dinner table overlooking the sea"
-        />
+          onerror="this.onerror=null;this.src='assets/images/fallback-terrace.svg'"
+          alt="Terrace dinner atmosphere"
+          loading="lazy" decoding="async">
       </div>
 
       <div class="statement__copy reveal">
-        <p>
-          A rooftop setting, warm Mediterranean air and plates made for long evenings.
-          Sade brings together the flavours of the coast with a relaxed, refined atmosphere.
-        </p>
+        <p>A rooftop setting, warm Mediterranean air and plates made for long evenings. Sade brings together the flavours of the coast with a relaxed, refined atmosphere.</p>
       </div>
     </section>
 
@@ -100,52 +115,29 @@
         <h2 class="reveal">Explore the menu</h2>
       </div>
 
-      <div class="menu-list">
-        <a class="menu-item" href="#reservation"
-           data-image="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&q=88">
-          <span class="menu-item__num">01</span>
-          <span class="menu-item__name">Starters</span>
-          <span class="menu-item__arrow">↗</span>
-        </a>
-
-        <a class="menu-item" href="#reservation"
-           data-image="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1600&q=88">
-          <span class="menu-item__num">02</span>
-          <span class="menu-item__name">Seafood</span>
-          <span class="menu-item__arrow">↗</span>
-        </a>
-
-        <a class="menu-item" href="#reservation"
-           data-image="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1600&q=88">
-          <span class="menu-item__num">03</span>
-          <span class="menu-item__name">Steaks</span>
-          <span class="menu-item__arrow">↗</span>
-        </a>
-
-        <a class="menu-item" href="#reservation"
-           data-image="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1600&q=88">
-          <span class="menu-item__num">04</span>
-          <span class="menu-item__name">Mediterranean</span>
-          <span class="menu-item__arrow">↗</span>
-        </a>
-
-        <a class="menu-item" href="#reservation"
-           data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1600&q=88">
-          <span class="menu-item__num">05</span>
-          <span class="menu-item__name">Cocktails</span>
-          <span class="menu-item__arrow">↗</span>
-        </a>
-
-        <a class="menu-item" href="#reservation"
-           data-image="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1600&q=88">
-          <span class="menu-item__num">06</span>
-          <span class="menu-item__name">Desserts</span>
-          <span class="menu-item__arrow">↗</span>
-        </a>
+      <div class="menu-list" aria-label="Menu categories">
+        <div class="menu-item" data-image="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&q=88" tabindex="0">
+          <span class="menu-item__num">01</span><span class="menu-item__name">Starters</span><span class="menu-item__arrow">•</span>
+        </div>
+        <div class="menu-item" data-image="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1600&q=88" tabindex="0">
+          <span class="menu-item__num">02</span><span class="menu-item__name">Seafood</span><span class="menu-item__arrow">•</span>
+        </div>
+        <div class="menu-item" data-image="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1600&q=88" tabindex="0">
+          <span class="menu-item__num">03</span><span class="menu-item__name">Steaks</span><span class="menu-item__arrow">•</span>
+        </div>
+        <div class="menu-item" data-image="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1600&q=88" tabindex="0">
+          <span class="menu-item__num">04</span><span class="menu-item__name">Mediterranean</span><span class="menu-item__arrow">•</span>
+        </div>
+        <div class="menu-item" data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1600&q=88" tabindex="0">
+          <span class="menu-item__num">05</span><span class="menu-item__name">Cocktails</span><span class="menu-item__arrow">•</span>
+        </div>
+        <div class="menu-item" data-image="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1600&q=88" tabindex="0">
+          <span class="menu-item__num">06</span><span class="menu-item__name">Desserts</span><span class="menu-item__arrow">•</span>
+        </div>
       </div>
 
       <div class="menu-preview" aria-hidden="true">
-        <img src="" alt="">
+        <img src="assets/images/fallback-food.svg" alt="">
       </div>
     </section>
 
@@ -164,17 +156,21 @@
 
       <div class="gallery__grid">
         <figure class="gallery-card gallery-card--tall image-reveal">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=88" alt="Restaurant interior">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=88"
+               onerror="this.onerror=null;this.src='assets/images/fallback-atmosphere.svg'"
+               alt="Restaurant atmosphere" loading="lazy" decoding="async">
           <figcaption>01 — Atmosphere</figcaption>
         </figure>
-
         <figure class="gallery-card image-reveal">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=88" alt="Mediterranean dishes">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=88"
+               onerror="this.onerror=null;this.src='assets/images/fallback-food.svg'"
+               alt="Mediterranean dishes" loading="lazy" decoding="async">
           <figcaption>02 — Kitchen</figcaption>
         </figure>
-
         <figure class="gallery-card image-reveal">
-          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=88" alt="Wine and dinner">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=88"
+               onerror="this.onerror=null;this.src='assets/images/fallback-evening.svg'"
+               alt="Wine and evening dining" loading="lazy" decoding="async">
           <figcaption>03 — Evening</figcaption>
         </figure>
       </div>
@@ -182,24 +178,18 @@
 
     <section class="reservation" id="reservation">
       <div class="reservation__media parallax-media">
-        <img
-          src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=2200&q=88"
-          alt="Night dinner atmosphere"
-        />
+        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=2200&q=88"
+             onerror="this.onerror=null;this.src='assets/images/fallback-evening.svg'"
+             alt="Dinner atmosphere at night" loading="lazy" decoding="async">
         <div class="reservation__shade"></div>
       </div>
 
       <div class="reservation__content">
         <p class="reveal">Reservations</p>
         <h2 class="reveal">YOUR TABLE<br>IS WAITING.</h2>
-
         <div class="reservation__actions reveal">
-          <a class="button-light magnetic" href="tel:+900000000000">
-            <span>Call to reserve</span>
-          </a>
-          <a class="text-link" href="https://wa.me/900000000000" target="_blank" rel="noopener">
-            WhatsApp reservation ↗
-          </a>
+          <a class="button-light magnetic" href="tel:+902428442303"><span>Call to reserve</span></a>
+          <a class="text-link" href="https://wa.me/905455369536" target="_blank" rel="noopener">WhatsApp reservation ↗</a>
         </div>
       </div>
     </section>
@@ -210,25 +200,25 @@
       <strong>SADE</strong>
       <p>Terrace Restaurant • Kalkan</p>
     </div>
-
     <div>
-      <p>Hasan Altan Cd.<br>Kalkan, Antalya</p>
+      <p>Hasan Altan Cd. No:7<br>07960 Kalkan, Kaş / Antalya</p>
+      <a href="tel:+902428442303">+90 242 844 23 03</a>
     </div>
-
     <div>
-      <a href="#">Instagram ↗</a>
-      <a href="#">Google Maps ↗</a>
+      <a href="https://www.instagram.com/sade.kalkan/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Sade+Terrace+Restaurant+Kalkan" target="_blank" rel="noopener">Google Maps ↗</a>
+      <a href="https://wa.me/905455369536" target="_blank" rel="noopener">WhatsApp ↗</a>
     </div>
-
     <div class="footer__bottom">
       <span>© 2026 Sade Terrace Restaurant</span>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-  <script src="script.js"></script>
+  <noscript><style>.loader{display:none!important}</style></noscript>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script defer src="script.js"></script>
 </body>
 </html>
