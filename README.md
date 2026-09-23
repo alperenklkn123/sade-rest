@@ -57,3 +57,23 @@ Each image already has a local fallback SVG in `assets/images/`.
 - Keyboard accessible via native button controls.
 - No cursor-following or hover images.
 - Current dish names are example content for layout preview; replace with the restaurant's real menu before launch.
+
+
+## V8 — Mobile WOW polish
+
+Built after reviewing the real iPhone screen recording.
+
+### Mobile changes
+- Desktop top link bar is replaced by a single compact glass brand header.
+- Added a full-screen editorial mobile navigation with large typography.
+- Added a floating bottom Menu / Book a table CTA with iPhone safe-area support.
+- Added a subtle scroll progress bar.
+- Hero is optimized for `100dvh` / modern iPhone browser chrome.
+- All accordion categories start closed on mobile, keeping the menu compact.
+- Menu dish descriptions stack cleanly beneath dish names instead of squeezing into a narrow right column.
+- Signature dishes use horizontal swipe / scroll-snap cards on mobile.
+- Gallery uses a premium horizontal swipe layout on mobile.
+- Instagram imagery becomes a swipe strip instead of a cramped grid.
+- Reduced unnecessary vertical dead space.
+- Reservation and footer spacing account for the fixed mobile CTA.
+- Added Escape-to-close and accessible `aria-expanded` handling for the mobile navigation.

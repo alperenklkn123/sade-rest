@@ -39,11 +39,54 @@
     }, "-=.55");
   }, { once: true });
 
+  const mobileCta = document.querySelector(".mobile-cta");
+  const progress = document.querySelector(".scroll-progress span");
+
   const updateNav = () => {
-    shell?.classList.toggle("is-scrolled", window.scrollY > 40);
+    const y = window.scrollY;
+    shell?.classList.toggle("is-scrolled", y > 32);
+
+    if (mobileCta) {
+      mobileCta.classList.toggle("is-visible", y > window.innerHeight * .55);
+    }
+
+    if (progress) {
+      const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      progress.style.transform = `scaleX(${Math.min(1, y / max)})`;
+    }
   };
   updateNav();
   window.addEventListener("scroll", updateNav, { passive: true });
+  window.addEventListener("resize", updateNav, { passive: true });
+
+
+  // Mobile full-screen navigation.
+  const menuToggle = document.querySelector(".mobile-menu-toggle");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  const setMobileMenu = (open) => {
+    if (!menuToggle || !mobileNav) return;
+    body.classList.toggle("menu-open", open);
+    mobileNav.classList.toggle("is-open", open);
+    mobileNav.setAttribute("aria-hidden", String(!open));
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  };
+
+  menuToggle?.addEventListener("click", () => {
+    setMobileMenu(!body.classList.contains("menu-open"));
+  });
+
+  mobileNav?.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", () => setMobileMenu(false));
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && body.classList.contains("menu-open")) {
+      setMobileMenu(false);
+      menuToggle?.focus();
+    }
+  });
 
   // Native smooth anchor scrolling. Keeps the site functional even if CDN scripts fail.
   document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -207,6 +250,16 @@
         panel.hidden = true;
       }
     };
+
+    if (window.matchMedia("(max-width: 720px)").matches) {
+      categories.forEach(category => {
+        const trigger = category.querySelector(".menu-category__trigger");
+        const panel = category.querySelector(".menu-category__panel");
+        category.classList.remove("is-open");
+        trigger?.setAttribute("aria-expanded", "false");
+        if (panel) panel.hidden = true;
+      });
+    }
 
     categories.forEach(category => {
       const trigger = category.querySelector(".menu-category__trigger");

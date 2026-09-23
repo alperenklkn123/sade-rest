@@ -20,6 +20,8 @@
     <div class="page-loader__line"><span></span></div>
   </div>
 
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
   <header class="site-shell">
     <div class="topbar">
       <nav class="topbar__nav" aria-label="Primary navigation">
@@ -48,8 +50,41 @@
          target="_blank" rel="noopener">
         Book a table
       </a>
+
+      <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
+
+  <aside class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <div class="mobile-nav__inner">
+      <div class="mobile-nav__top">
+        <span class="mobile-nav__brand">SADE</span>
+        <span class="mobile-nav__place">Kalkan • Mediterranean Coast</span>
+      </div>
+
+      <nav class="mobile-nav__links" aria-label="Mobile navigation">
+        <a href="#experience"><span>01</span>Experience</a>
+        <a href="#menu"><span>02</span>Menu</a>
+        <a href="#signature"><span>03</span>Signature</a>
+        <a href="#gallery"><span>04</span>Gallery</a>
+        <a href="#reservation"><span>05</span>Reservations</a>
+        <a href="#contact"><span>06</span>Contact</a>
+      </nav>
+
+      <div class="mobile-nav__footer">
+        <a href="tel:+902428442303">+90 242 844 23 03</a>
+        <a href="https://www.instagram.com/sade.kalkan/" target="_blank" rel="noopener">@sade.kalkan ↗</a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="mobile-cta" aria-label="Quick actions">
+    <a href="#menu" class="mobile-cta__menu">Menu</a>
+    <a href="https://wa.me/905455369536?text=Hello%20Sade%20Terrace%2C%20I%20would%20like%20to%20book%20a%20table."
+       target="_blank" rel="noopener" class="mobile-cta__book">Book a table</a>
+  </div>
 
   <main>
     <section class="hero" id="top">
