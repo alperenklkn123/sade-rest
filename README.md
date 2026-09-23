@@ -1,67 +1,47 @@
-# Sade Terrace Restaurant — V2
+# Sade Terrace — V6 Premium
 
-GitHub Pages-ready static website. No npm, build, Actions or workflow is required.
+GitHub Pages-ready static website.
 
 ## Upload
 
-Upload these files/folders directly to the repository root:
+Upload everything in this folder to the root of your GitHub repository:
 
-- `index.html`
-- `styles.css`
-- `script.js`
-- `favicon.svg`
-- `assets/`
-- `.nojekyll`
+- index.html
+- styles.css
+- script.js
+- favicon.svg
+- .nojekyll
+- assets/
 
-GitHub Pages settings:
+Then use GitHub Pages:
+Settings → Pages → Deploy from a branch → main → /(root)
 
-- Source: **Deploy from a branch**
-- Branch: **main**
-- Folder: **/(root)**
+## What changed in V6
 
-## What V2 fixes
+- Completely reworked visual hierarchy.
+- Transparent glass top navigation that becomes darker on scroll.
+- Stronger Sade hero section.
+- New "A slower kind of evening" story section.
+- Refined "Dinner Above Kalkan" editorial section.
+- Menu rows are now text-only: no cursor-following / hover photos.
+- Added Signature Plates section.
+- Rebuilt gallery in an editorial layout.
+- Added Instagram strip.
+- Improved reservation section and footer.
+- Added accessibility / reduced-motion handling.
+- Added loader fail-safe so the site cannot get stuck if CDN scripts fail.
+- Removed Lenis dependency for greater reliability.
 
-- Loader has a hard failsafe and cannot permanently block the page.
-- GSAP / Lenis failure falls back to a usable native page.
-- Updated GSAP and Lenis CDN package paths.
-- Mobile navigation added.
-- Safari / mobile viewport and safe-area behavior improved.
-- Reduced-motion accessibility added.
-- Below-the-fold images lazy-load.
-- Every remote demo image has a local SVG fallback inside `assets/images/`.
-- Fake phone/WhatsApp placeholders removed.
-- Contact details, Instagram and Maps links added.
-- Menu rows no longer pretend to be reservation links.
-- Desktop-only hover preview is disabled on touch devices.
+## Important before final launch
 
-## Important before the real launch
+The current food / atmosphere images are demo images from Unsplash.
 
-The main photographs are demo images. Replace them with Sade Terrace's real photography when available. The local SVG files are safety fallbacks, not final restaurant photography.
+For the final version, replace them with Sade Terrace's real photography:
+- terrace at sunset
+- terrace at night
+- Kalkan view
+- 4–6 signature dishes
+- cocktail close-up
+- guests / table atmosphere
 
-Current contact values used in this build:
-
-- Landline: +90 242 844 23 03
-- WhatsApp: +90 545 536 95 36
-- Instagram: @sade.kalkan
-- Address: Hasan Altan Cd. No:7, 07960 Kalkan, Kaş / Antalya
-
-
-## V3 navigation update
-
-- Quick links are now in a permanent fixed terracotta top bar.
-- Phone and WhatsApp stay on the right side of the top bar on desktop.
-- The duplicated Experience / Menu / Gallery / Contact navigation was removed from the lower header.
-- The lower header now contains only the Sade brand and Book a Table button.
-- On smaller screens, the quick links remain fixed and horizontally scrollable.
-
-
-## V4 glass navigation
-- Orange/terracotta top bar removed.
-- Top navigation is now transparent glass with subtle dark blur.
-- Menu and contact text use stronger contrast and soft shadow for readability.
-
-
-## V5 — Menu hover images removed
-- Removed the menu preview image element and all image-hover JavaScript.
-- Hovering menu categories now shows no photo.
-- Fixes the stray photo that could stay visible in the top-left corner.
+Each image already has a local fallback SVG in `assets/images/`.

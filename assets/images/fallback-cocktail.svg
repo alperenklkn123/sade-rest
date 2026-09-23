@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500">
 <defs>
   <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#193538"/>
-    <stop offset="1" stop-color="#8bb3ad"/>
+    <stop offset="0" stop-color="#312018"/>
+    <stop offset="1" stop-color="#b66f4a"/>
   </linearGradient>
   <filter id="n">
     <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/>
@@ -13,6 +13,6 @@
 <circle cx="900" cy="400" r="310" fill="rgba(255,255,255,.08)"/>
 <circle cx="250" cy="1180" r="410" fill="rgba(0,0,0,.14)"/>
 <rect width="1200" height="1500" filter="url(#n)" opacity=".55"/>
-<text x="90" y="1240" fill="#f3eadf" font-family="Georgia,serif" font-size="135" letter-spacing="10">SADE</text>
-<text x="92" y="1340" fill="#f3eadf" opacity=".75" font-family="Arial,sans-serif" font-size="34" letter-spacing="12">TERRACE</text>
+<text x="90" y="1240" fill="#f3eadf" font-family="Georgia,serif" font-size="135" letter-spacing="10">SUNSET</text>
+<text x="92" y="1340" fill="#f3eadf" opacity=".75" font-family="Arial,sans-serif" font-size="34" letter-spacing="12">DRINKS</text>
 </svg>
