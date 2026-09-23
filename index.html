@@ -131,56 +131,179 @@
         </p>
       </div>
 
-      <div class="menu-list">
-        <div class="menu-row reveal">
-          <span>01</span>
-          <div>
-            <strong>Starters</strong>
-            <small>To share, to begin</small>
+      <div class="menu-list menu-accordion" data-accordion>
+        <article class="menu-category is-open reveal">
+          <button class="menu-category__trigger" type="button" aria-expanded="true" aria-controls="menu-panel-starters">
+            <span class="menu-category__num">01</span>
+            <span class="menu-category__title">
+              <strong>Starters</strong>
+              <small>To share, to begin</small>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"></span>
+          </button>
+          <div class="menu-category__panel" id="menu-panel-starters">
+            <div class="menu-category__inner">
+              <div class="menu-dish">
+                <div><strong>Burrata</strong><small>Tomato, basil, olive oil</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Beef Carpaccio</strong><small>Parmesan, capers, rocket</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Calamari</strong><small>Lemon, herbs, house sauce</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Mediterranean Meze</strong><small>Selection for the table</small></div>
+                <span>—</span>
+              </div>
+            </div>
           </div>
-          <span>—</span>
-        </div>
-        <div class="menu-row reveal">
-          <span>02</span>
-          <div>
-            <strong>Seafood</strong>
-            <small>Fresh from the Mediterranean</small>
+        </article>
+
+        <article class="menu-category reveal">
+          <button class="menu-category__trigger" type="button" aria-expanded="false" aria-controls="menu-panel-seafood">
+            <span class="menu-category__num">02</span>
+            <span class="menu-category__title">
+              <strong>Seafood</strong>
+              <small>Fresh from the Mediterranean</small>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"></span>
+          </button>
+          <div class="menu-category__panel" id="menu-panel-seafood" hidden>
+            <div class="menu-category__inner">
+              <div class="menu-dish">
+                <div><strong>Grilled Sea Bass</strong><small>Lemon butter, seasonal greens</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>King Prawns</strong><small>Garlic, chilli, olive oil</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Grilled Octopus</strong><small>Potato, citrus, herbs</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Catch of the Day</strong><small>Ask our team for today's selection</small></div>
+                <span>—</span>
+              </div>
+            </div>
           </div>
-          <span>—</span>
-        </div>
-        <div class="menu-row reveal">
-          <span>03</span>
-          <div>
-            <strong>Steaks</strong>
-            <small>Fire, charcoal & premium cuts</small>
+        </article>
+
+        <article class="menu-category reveal">
+          <button class="menu-category__trigger" type="button" aria-expanded="false" aria-controls="menu-panel-steaks">
+            <span class="menu-category__num">03</span>
+            <span class="menu-category__title">
+              <strong>Steaks</strong>
+              <small>Fire, charcoal &amp; premium cuts</small>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"></span>
+          </button>
+          <div class="menu-category__panel" id="menu-panel-steaks" hidden>
+            <div class="menu-category__inner">
+              <div class="menu-dish">
+                <div><strong>Ribeye</strong><small>Charcoal grilled, house butter</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Beef Tenderloin</strong><small>Seasonal vegetables, jus</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Lamb Chops</strong><small>Herbs, roast vegetables</small></div>
+                <span>—</span>
+              </div>
+            </div>
           </div>
-          <span>—</span>
-        </div>
-        <div class="menu-row reveal">
-          <span>04</span>
-          <div>
-            <strong>Mediterranean</strong>
-            <small>Coastal flavours, simply served</small>
+        </article>
+
+        <article class="menu-category reveal">
+          <button class="menu-category__trigger" type="button" aria-expanded="false" aria-controls="menu-panel-mediterranean">
+            <span class="menu-category__num">04</span>
+            <span class="menu-category__title">
+              <strong>Mediterranean</strong>
+              <small>Coastal flavours, simply served</small>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"></span>
+          </button>
+          <div class="menu-category__panel" id="menu-panel-mediterranean" hidden>
+            <div class="menu-category__inner">
+              <div class="menu-dish">
+                <div><strong>Chicken Souvlaki</strong><small>Flatbread, yoghurt, herbs</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Seasonal Vegetable Plate</strong><small>Olive oil, grains, local greens</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>House Pasta</strong><small>Seasonal Mediterranean preparation</small></div>
+                <span>—</span>
+              </div>
+            </div>
           </div>
-          <span>—</span>
-        </div>
-        <div class="menu-row reveal">
-          <span>05</span>
-          <div>
-            <strong>Cocktails</strong>
-            <small>Sunset classics & signatures</small>
+        </article>
+
+        <article class="menu-category reveal">
+          <button class="menu-category__trigger" type="button" aria-expanded="false" aria-controls="menu-panel-cocktails">
+            <span class="menu-category__num">05</span>
+            <span class="menu-category__title">
+              <strong>Cocktails</strong>
+              <small>Sunset classics &amp; signatures</small>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"></span>
+          </button>
+          <div class="menu-category__panel" id="menu-panel-cocktails" hidden>
+            <div class="menu-category__inner">
+              <div class="menu-dish">
+                <div><strong>Sade Spritz</strong><small>Citrus, bubbles, Mediterranean botanicals</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Negroni</strong><small>Classic bitter aperitivo</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Passion Fruit Martini</strong><small>Vanilla, passion fruit, citrus</small></div>
+                <span>—</span>
+              </div>
+            </div>
           </div>
-          <span>—</span>
-        </div>
-        <div class="menu-row reveal">
-          <span>06</span>
-          <div>
-            <strong>Desserts</strong>
-            <small>A sweet finish</small>
+        </article>
+
+        <article class="menu-category reveal">
+          <button class="menu-category__trigger" type="button" aria-expanded="false" aria-controls="menu-panel-desserts">
+            <span class="menu-category__num">06</span>
+            <span class="menu-category__title">
+              <strong>Desserts</strong>
+              <small>A sweet finish</small>
+            </span>
+            <span class="menu-category__icon" aria-hidden="true"></span>
+          </button>
+          <div class="menu-category__panel" id="menu-panel-desserts" hidden>
+            <div class="menu-category__inner">
+              <div class="menu-dish">
+                <div><strong>Chocolate</strong><small>Dark chocolate, cream, seasonal fruit</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Baklava</strong><small>Pistachio, syrup, ice cream</small></div>
+                <span>—</span>
+              </div>
+              <div class="menu-dish">
+                <div><strong>Seasonal Dessert</strong><small>Ask our team for today's selection</small></div>
+                <span>—</span>
+              </div>
+            </div>
           </div>
-          <span>—</span>
-        </div>
+        </article>
       </div>
+
+      <p class="menu-disclaimer reveal">Example selection for layout preview. Replace with Sade Terrace's current dishes and prices before final launch.</p>
 
       <div class="menu-cta reveal">
         <a class="button-dark magnetic"

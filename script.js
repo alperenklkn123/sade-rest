@@ -157,4 +157,75 @@
       }
     );
   });
+
+  // Menu accordion: only one category can be open at a time.
+  const accordion = document.querySelector("[data-accordion]");
+  if (accordion) {
+    const categories = [...accordion.querySelectorAll(".menu-category")];
+
+    const openCategory = (category, animate = true) => {
+      const trigger = category.querySelector(".menu-category__trigger");
+      const panel = category.querySelector(".menu-category__panel");
+      if (!trigger || !panel) return;
+
+      category.classList.add("is-open");
+      trigger.setAttribute("aria-expanded", "true");
+      panel.hidden = false;
+
+      if (animate && window.gsap && !reduceMotion) {
+        gsap.fromTo(panel,
+          { height: 0, opacity: 0 },
+          {
+            height: "auto", opacity: 1, duration: .48, ease: "power3.out",
+            clearProps: "height"
+          }
+        );
+        gsap.from(panel.querySelectorAll(".menu-dish"), {
+          y: 12, opacity: 0, duration: .35, stagger: .055, ease: "power2.out"
+        });
+      }
+    };
+
+    const closeCategory = (category, animate = true) => {
+      const trigger = category.querySelector(".menu-category__trigger");
+      const panel = category.querySelector(".menu-category__panel");
+      if (!trigger || !panel) return;
+
+      category.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+
+      if (animate && window.gsap && !reduceMotion && !panel.hidden) {
+        gsap.to(panel, {
+          height: 0, opacity: 0, duration: .34, ease: "power2.inOut",
+          onComplete: () => {
+            panel.hidden = true;
+            panel.style.height = "";
+            panel.style.opacity = "";
+          }
+        });
+      } else {
+        panel.hidden = true;
+      }
+    };
+
+    categories.forEach(category => {
+      const trigger = category.querySelector(".menu-category__trigger");
+      trigger?.addEventListener("click", () => {
+        const wasOpen = category.classList.contains("is-open");
+
+        categories.forEach(other => {
+          if (other !== category && other.classList.contains("is-open")) {
+            closeCategory(other);
+          }
+        });
+
+        if (wasOpen) {
+          closeCategory(category);
+        } else {
+          openCategory(category);
+        }
+      });
+    });
+  }
+
 })();

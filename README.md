@@ -45,3 +45,15 @@ For the final version, replace them with Sade Terrace's real photography:
 - guests / table atmosphere
 
 Each image already has a local fallback SVG in `assets/images/`.
+
+
+## V7 — Accordion menu
+
+- Menu categories now open inline on click.
+- Only one category stays open at a time.
+- Clicking the open category again closes it.
+- Dish rows animate in with GSAP when available.
+- Works without GSAP as a normal accessible accordion.
+- Keyboard accessible via native button controls.
+- No cursor-following or hover images.
+- Current dish names are example content for layout preview; replace with the restaurant's real menu before launch.
