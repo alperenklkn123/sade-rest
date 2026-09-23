@@ -53,3 +53,9 @@ Current contact values used in this build:
 - The duplicated Experience / Menu / Gallery / Contact navigation was removed from the lower header.
 - The lower header now contains only the Sade brand and Book a Table button.
 - On smaller screens, the quick links remain fixed and horizontally scrollable.
+
+
+## V4 glass navigation
+- Orange/terracotta top bar removed.
+- Top navigation is now transparent glass with subtle dark blur.
+- Menu and contact text use stronger contrast and soft shadow for readability.
