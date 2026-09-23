@@ -59,3 +59,9 @@ Current contact values used in this build:
 - Orange/terracotta top bar removed.
 - Top navigation is now transparent glass with subtle dark blur.
 - Menu and contact text use stronger contrast and soft shadow for readability.
+
+
+## V5 — Menu hover images removed
+- Removed the menu preview image element and all image-hover JavaScript.
+- Hovering menu categories now shows no photo.
+- Fixes the stray photo that could stay visible in the top-left corner.

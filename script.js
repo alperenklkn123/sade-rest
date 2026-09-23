@@ -87,36 +87,6 @@
     $$('.image-reveal').forEach(el => el.style.clipPath='none');
   }
 
-  // Desktop-only menu image preview. It is optional and never blocks navigation.
-  const preview = $('.menu-preview');
-  const previewImg = preview?.querySelector('img');
-  if (finePointer && preview && previewImg) {
-    let active=false;
-    const move = e => {
-      if (!active) return;
-      if (window.gsap) window.gsap.to(preview,{x:e.clientX,y:e.clientY,duration:.35,ease:'power3.out'});
-      else { preview.style.left=e.clientX+'px'; preview.style.top=e.clientY+'px'; }
-    };
-    window.addEventListener('mousemove', move, {passive:true});
+  // Menu items intentionally stay text-only on hover.
 
-    $$('.menu-item').forEach(item => {
-      const show = () => {
-        active=true;
-        const src=item.dataset.image;
-        previewImg.onerror=()=>{ previewImg.onerror=null; previewImg.src='assets/images/fallback-food.svg'; };
-        if (src) previewImg.src=src;
-        if (window.gsap) window.gsap.to(preview,{opacity:1,scale:1,rotate:2,duration:.3,ease:'power3.out'});
-        else preview.style.opacity='1';
-      };
-      const hide = () => {
-        active=false;
-        if (window.gsap) window.gsap.to(preview,{opacity:0,scale:.84,rotate:-4,duration:.25,ease:'power3.in'});
-        else preview.style.opacity='0';
-      };
-      item.addEventListener('mouseenter',show);
-      item.addEventListener('mouseleave',hide);
-      item.addEventListener('focus',show);
-      item.addEventListener('blur',hide);
-    });
-  }
 })();
